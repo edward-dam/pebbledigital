@@ -1,0 +1,27 @@
+{
+    "author": "Edward Dam",
+    "dependencies": {},
+    "keywords": [],
+    "name": "ed-dam",
+    "pebble": {
+        "capabilities": [
+            "location"
+        ],
+        "displayName": "Ed Dam",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "rocky",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "basalt"
+        ],
+        "uuid": "0d473ae9-5fae-44a4-8728-148858d3ac28",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.0.0"
+}
