@@ -2,12 +2,12 @@
     "author": "Edward Dam",
     "dependencies": {},
     "keywords": [],
-    "name": "ed-dam",
+    "name": "digieddam-v1.0",
     "pebble": {
         "capabilities": [
             "location"
         ],
-        "displayName": "Ed Dam",
+        "displayName": "DigiEdDam v1.0",
         "enableMultiJS": true,
         "messageKeys": [],
         "projectType": "rocky",
@@ -18,7 +18,7 @@
         "targetPlatforms": [
             "basalt"
         ],
-        "uuid": "0d473ae9-5fae-44a4-8728-148858d3ac28",
+        "uuid": "12910548-b4d9-4d97-a5d7-6e92d59bdcab",
         "watchapp": {
             "watchface": true
         }

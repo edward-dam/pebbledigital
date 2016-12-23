@@ -6,7 +6,6 @@ Pebble.on('message', function(event) {
   var message = event.data;
   if (message.fetch) {
     navigator.geolocation.getCurrentPosition(function(pos) {
-      //var url = 'http://api.openweathermap.org/data/2.5/weather?q=Woking,uk' +
       var url = 'http://api.openweathermap.org/data/2.5/weather' +
         '?lat=' + pos.coords.latitude +
         '&lon=' + pos.coords.longitude +
@@ -15,6 +14,7 @@ Pebble.on('message', function(event) {
         var locationData = JSON.parse(respText);
         Pebble.postMessage({
           'location': {
+            //'name': 'Woking'
             'name': locationData.name
           }
         });
