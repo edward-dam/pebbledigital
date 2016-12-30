@@ -11,11 +11,13 @@ Pebble.on('message', function(event) {
         '&lon=' + pos.coords.longitude +
         '&appid=' + myAPIKey;
       request(url, 'GET', function(respText) {
-        var locationData = JSON.parse(respText);
+        var weatherData = JSON.parse(respText);
         Pebble.postMessage({
-          'location': {
-            //'name': 'Woking'
-            'name': locationData.name
+          'api': {
+            //'location':    'Woking',
+            //'temperature': '5'
+            'location':    weatherData.name,
+            'temperature': Math.round(weatherData.main.temp - 273.15)
           }
         });
       });
