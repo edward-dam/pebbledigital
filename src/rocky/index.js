@@ -4,6 +4,14 @@
 
 var rocky  = require('rocky');
 
+// Draw Line
+
+function drawLine(ctx, linewidth, color, height) {
+  ctx.lineWidth   = linewidth;
+  ctx.strokeStyle = color;
+  ctx.strokeRect(0, height, 144, 0);
+}
+
 // Draw Text
 
 function drawText(ctx, text, color, align, font, width, height) {
@@ -44,11 +52,9 @@ rocky.on('draw', function(event) {
   ctx.clearRect(0, 0, ctx.canvas.clientWidth, ctx.canvas.clientHeight);
   
   // Draw Lines
-  ctx.lineWidth   = 2;
-  ctx.strokeStyle = 'white';
-  ctx.strokeRect(0, 35, 144, 0);
-  ctx.strokeRect(0, 118, 144, 0);
-  ctx.strokeRect(0, 143, 144, 0);
+  drawLine(ctx, 2, 'white', 35);
+  drawLine(ctx, 2, 'white', 118);
+  drawLine(ctx, 2, 'white', 143);
 
   // Define Screen Size
   var width  = ctx.canvas.unobstructedWidth;
