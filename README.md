@@ -1,4 +1,4 @@
-# pebbleface
+# pebbledigital
 Digi EdDam v1.0
 
-![pebbleface.png](http://www.edwarddam.com/images/pebbleface.png)
+![pebbledigital.png](http://www.edwarddam.com/images/pebbledigital.png)
