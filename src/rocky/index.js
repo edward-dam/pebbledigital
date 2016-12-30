@@ -39,18 +39,20 @@ rocky.on('minutechange', function(event) {
 
 rocky.on('draw', function(event) {
   var ctx    = event.context;
-  var width  = ctx.canvas.unobstructedWidth;
-  var height = ctx.canvas.unobstructedHeight;
   
   // Clear Canvas
   ctx.clearRect(0, 0, ctx.canvas.clientWidth, ctx.canvas.clientHeight);
   
-  // Draw Rectangle
+  // Draw Lines
   ctx.lineWidth   = 2;
   ctx.strokeStyle = 'white';
   ctx.strokeRect(0, 35, 144, 0);
   ctx.strokeRect(0, 118, 144, 0);
   ctx.strokeRect(0, 143, 144, 0);
+
+  // Define Screen Size
+  var width  = ctx.canvas.unobstructedWidth;
+  var height = ctx.canvas.unobstructedHeight;
   
   // Draw Fixed Text
   drawText(ctx, 'pebble',    'white', 'left',   '24px bold Gothic', 9,          0);
