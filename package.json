@@ -5,8 +5,7 @@
     "name": "digidam-v1.0",
     "pebble": {
         "capabilities": [
-            "location",
-            "configurable"
+            "location"
         ],
         "displayName": "DigiDam v1.0",
         "enableMultiJS": true,
