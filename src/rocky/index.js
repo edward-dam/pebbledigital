@@ -74,9 +74,8 @@ rocky.on('draw', function(event) {
   drawText(ctx, time, 'white', 'center', '49px Roboto-subset', width / 2, height / 2 - 28);
   
   // Draw Date
-  var dayNames  = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  var dateDay   = dayNames[new Date().getDay()];
-  var dateDate  = new Date().toLocaleDateString(undefined, {day:   '2-digit'});
+  var dateDay   = new Date().toLocaleDateString(undefined, {day:   'long'});
+  var dateDate  = new Date().toLocaleDateString(undefined, {day:   'numeric'});
   var dateMonth = new Date().toLocaleDateString(undefined, {month: 'short'});
   var date      = dateDay + " " + dateDate + " " + dateMonth;
   drawText(ctx, date, 'white', 'center', '18px bold Gothic', width / 2,  height / 2 - 45);
