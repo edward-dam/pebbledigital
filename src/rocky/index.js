@@ -62,7 +62,8 @@ rocky.on('draw', function(event) {
   
   // Draw Fixed Text
   drawText(ctx, 'pebble',    'white', 'left',   '24px bold Gothic', 9,          0);
-  drawText(ctx, 'edwarddam', 'white', 'right',  '14px bold Gothic', width - 9,  9);
+  //drawText(ctx, 'edwarddam', 'white', 'right',  '14px bold Gothic', width - 9,  9);
+  drawText(ctx, 'digital v1.0', 'white', 'right',  '14px bold Gothic', width - 9,  9);
   drawText(ctx, 'water -',   'white', 'left',   '14px bold Gothic', 15,         height - 20);
   drawText(ctx, 'WR',        'white', 'center', '18px bold Gothic', width / 2,  height - 24);
   drawText(ctx, '- resist',  'white', 'right',  '14px bold Gothic', width - 15, height - 20);

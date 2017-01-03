@@ -2,12 +2,12 @@
     "author": "Edward Dam",
     "dependencies": {},
     "keywords": [],
-    "name": "digidam-v1.0",
+    "name": "digital-v1.0",
     "pebble": {
         "capabilities": [
             "location"
         ],
-        "displayName": "DigiDam v1.0",
+        "displayName": "Digital v1.0",
         "enableMultiJS": true,
         "messageKeys": [],
         "projectType": "rocky",
