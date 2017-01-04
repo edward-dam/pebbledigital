@@ -60,14 +60,14 @@ rocky.on('draw', function(event) {
   
   // Draw Lines
   drawLine(ctx, 2, 'white', 60);
-  drawLine(ctx, 2, 'white', 120);
+  drawLine(ctx, 2, 'white', 121);
   
   // Draw Box
-  drawBox(ctx, 'white', 67,   9,  68, 19);
-  drawBox(ctx, 'white', 0,   65, 144, 50);
-  drawBox(ctx, 'white', 60, 148,  23, 17);
-  drawBox(ctx, 'white', 55, 148,  2,  17);
-  drawBox(ctx, 'white', 86, 148,  2,  17);
+  drawBox(ctx, 'gray', 67,   9,  68, 19);
+  drawBox(ctx, 'white', 0,  65, 144, 50);
+  drawBox(ctx, 'gray', 60, 148,  24, 17);
+  drawBox(ctx, 'gray', 55, 148,  2,  17);
+  drawBox(ctx, 'gray', 87, 148,  2,  17);
   
   // Define Screen Size
   var width  = ctx.canvas.unobstructedWidth;
@@ -76,9 +76,9 @@ rocky.on('draw', function(event) {
   // Draw Fixed Text
   drawText(ctx, 'pebble',       'white', 'left',   '24px bold Gothic', 10,          0);
   drawText(ctx, 'digital v1.1', 'black', 'right',  '14px bold Gothic', width - 10,  9);
-  drawText(ctx, 'water',        'white', 'left',   '14px bold Gothic', 13,         height - 20);
+  drawText(ctx, 'water',        'gray',  'left',   '14px bold Gothic', 13,         height - 20);
   drawText(ctx, 'WR',           'black', 'center', '18px bold Gothic', width / 2,  height - 24);
-  drawText(ctx, 'resist',       'white', 'right',  '14px bold Gothic', width - 13, height - 20);
+  drawText(ctx, 'resist',       'gray',  'right',  '14px bold Gothic', width - 12, height - 20);
   
   // Draw Time
   var dateHour   = new Date().toLocaleTimeString(undefined, {hour:   '2-digit'});
