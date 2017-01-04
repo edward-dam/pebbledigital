@@ -6,10 +6,17 @@ var rocky  = require('rocky');
 
 // Draw Line
 
-function drawLine(ctx, linewidth, color, height) {
+function drawLine(ctx, linewidth, color, position) {
   ctx.lineWidth   = linewidth;
   ctx.strokeStyle = color;
-  ctx.strokeRect(0, height, 144, 0);
+  ctx.strokeRect(0, position, 144, 0);
+}
+
+// Draw Box
+
+function drawBox(ctx, color, x, y, width, height) {
+  ctx.fillStyle = color;
+  ctx.fillRect(x, y, width, height);
 }
 
 // Draw Text
@@ -52,37 +59,42 @@ rocky.on('draw', function(event) {
   ctx.clearRect(0, 0, ctx.canvas.clientWidth, ctx.canvas.clientHeight);
   
   // Draw Lines
-  drawLine(ctx, 2, 'white', 35);
-  drawLine(ctx, 2, 'white', 118);
-  drawLine(ctx, 2, 'white', 143);
-
+  drawLine(ctx, 2, 'white', 60);
+  drawLine(ctx, 2, 'white', 120);
+  
+  // Draw Box
+  drawBox(ctx, 'white', 67,   9,  68, 19);
+  drawBox(ctx, 'white', 0,   65, 144, 50);
+  drawBox(ctx, 'white', 60, 148,  23, 17);
+  drawBox(ctx, 'white', 55, 148,  2,  17);
+  drawBox(ctx, 'white', 86, 148,  2,  17);
+  
   // Define Screen Size
   var width  = ctx.canvas.unobstructedWidth;
   var height = ctx.canvas.unobstructedHeight;
   
   // Draw Fixed Text
-  drawText(ctx, 'pebble',    'white', 'left',   '24px bold Gothic', 9,          0);
-  //drawText(ctx, 'edwarddam', 'white', 'right',  '14px bold Gothic', width - 9,  9);
-  drawText(ctx, 'digital v1.0', 'white', 'right',  '14px bold Gothic', width - 9,  9);
-  drawText(ctx, 'water -',   'white', 'left',   '14px bold Gothic', 15,         height - 20);
-  drawText(ctx, 'WR',        'white', 'center', '18px bold Gothic', width / 2,  height - 24);
-  drawText(ctx, '- resist',  'white', 'right',  '14px bold Gothic', width - 15, height - 20);
+  drawText(ctx, 'pebble',       'white', 'left',   '24px bold Gothic', 10,          0);
+  drawText(ctx, 'digital v1.1', 'black', 'right',  '14px bold Gothic', width - 10,  9);
+  drawText(ctx, 'water',        'white', 'left',   '14px bold Gothic', 13,         height - 20);
+  drawText(ctx, 'WR',           'black', 'center', '18px bold Gothic', width / 2,  height - 24);
+  drawText(ctx, 'resist',       'white', 'right',  '14px bold Gothic', width - 13, height - 20);
   
   // Draw Time
   var dateHour   = new Date().toLocaleTimeString(undefined, {hour:   '2-digit'});
   var dateMinute = new Date().toLocaleTimeString(undefined, {minute: '2-digit'});
   var time       = dateHour + ":" + dateMinute;
-  drawText(ctx, time, 'white', 'center', '49px Roboto-subset', width / 2, height / 2 - 28);
-  
+  drawText(ctx, time, 'black', 'center', '49px Roboto-subset', width / 2, height / 2 - 26);
+
   // Draw Date
   var dateDay   = new Date().toLocaleDateString(undefined, {day:   'long'});
   var dateDate  = new Date().toLocaleDateString(undefined, {day:   'numeric'});
   var dateMonth = new Date().toLocaleDateString(undefined, {month: 'short'});
   var date      = dateDay + " " + dateDate + " " + dateMonth;
-  drawText(ctx, date, 'white', 'center', '18px bold Gothic', width / 2,  height / 2 - 45);
+  drawText(ctx, date, 'white', 'center', '18px bold Gothic', width / 2,  height / 2 - 50);
 
   // Draw Weather
   var city        = api.location;
   var temperature = api.temperature;
-  drawText(ctx, city + ' ' + temperature + '°C', 'white', 'center', '18px bold Gothic', width / 2, height - 50);
+  drawText(ctx, city + ' ' + temperature + '°C', 'white', 'center', '18px bold Gothic', width / 2, height - 47);
 });
