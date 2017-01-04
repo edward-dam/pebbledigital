@@ -15,7 +15,7 @@ Pebble.on('message', function(event) {
         Pebble.postMessage({
           'api': {
             //'location':    'Location',
-            //'temperature': '20'
+            //'temperature': '8'
             'location':    weatherData.name,
             'temperature': Math.round(weatherData.main.temp - 273.15)
           }

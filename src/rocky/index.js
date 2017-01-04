@@ -59,11 +59,11 @@ rocky.on('draw', function(event) {
   ctx.clearRect(0, 0, ctx.canvas.clientWidth, ctx.canvas.clientHeight);
   
   // Draw Lines
-  drawLine(ctx, 2, 'white', 60);
-  drawLine(ctx, 2, 'white', 121);
+  drawLine(ctx, 2, 'white', 39);
+  drawLine(ctx, 2, 'white', 141);
   
   // Draw Box
-  drawBox(ctx, 'gray', 67,   9,  68, 19);
+  drawBox(ctx, 'gray', 67,   9,  69, 19);
   drawBox(ctx, 'white', 0,  65, 144, 50);
   drawBox(ctx, 'gray', 60, 148,  24, 17);
   drawBox(ctx, 'gray', 55, 148,  2,  17);
@@ -75,7 +75,7 @@ rocky.on('draw', function(event) {
   
   // Draw Fixed Text
   drawText(ctx, 'pebble',       'white', 'left',   '24px bold Gothic', 10,          0);
-  drawText(ctx, 'digital v1.1', 'black', 'right',  '14px bold Gothic', width - 10,  9);
+  drawText(ctx, 'digital v1.3', 'black', 'right',  '14px bold Gothic', width - 10,  9);
   drawText(ctx, 'water',        'gray',  'left',   '14px bold Gothic', 13,         height - 20);
   drawText(ctx, 'WR',           'black', 'center', '18px bold Gothic', width / 2,  height - 24);
   drawText(ctx, 'resist',       'gray',  'right',  '14px bold Gothic', width - 12, height - 20);
@@ -91,10 +91,10 @@ rocky.on('draw', function(event) {
   var dateDate  = new Date().toLocaleDateString(undefined, {day:   'numeric'});
   var dateMonth = new Date().toLocaleDateString(undefined, {month: 'short'});
   var date      = dateDay + " " + dateDate + " " + dateMonth;
-  drawText(ctx, date, 'white', 'center', '18px bold Gothic', width / 2,  height / 2 - 50);
-
+  drawText(ctx, date, 'white', 'center', '18px bold Gothic', width / 2,  height / 2 - 44);
+  
   // Draw Weather
   var city        = api.location;
   var temperature = api.temperature;
-  drawText(ctx, city + ' ' + temperature + '°C', 'white', 'center', '18px bold Gothic', width / 2, height - 47);
+  drawText(ctx, city + ' ' + temperature + '°C', 'white', 'center', '18px bold Gothic', width / 2, height - 53);
 });
