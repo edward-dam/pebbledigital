@@ -2,12 +2,12 @@
     "author": "Edward Dam",
     "dependencies": {},
     "keywords": [],
-    "name": "digital-v1.4",
+    "name": "digital-v1.5",
     "pebble": {
         "capabilities": [
             "location"
         ],
-        "displayName": "Digital v1.4",
+        "displayName": "Digital v1.5",
         "enableMultiJS": true,
         "messageKeys": [],
         "projectType": "rocky",
@@ -17,6 +17,7 @@
         "sdkVersion": "3",
         "targetPlatforms": [
             "basalt",
+            "chalk",
             "diorite"
         ],
         "uuid": "12910548-b4d9-4d97-a5d7-6e92d59bdcab",
@@ -24,5 +25,5 @@
             "watchface": true
         }
     },
-    "version": "1.4.0"
+    "version": "1.5.0"
 }
