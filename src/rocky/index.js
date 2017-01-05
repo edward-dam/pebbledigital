@@ -2,7 +2,7 @@
 
 // Rocky.js
 
-var rocky  = require('rocky');
+var rocky = require('rocky');
 
 // Draw Line
 
@@ -85,7 +85,7 @@ rocky.on('draw', function(event) {
   drawText(ctx, 'resist',       'gray',  'left',   '14px bold Gothic', cx + 23, cy + 64);
   
   // Draw Time
-  var dateHour   = new Date().toLocaleTimeString(undefined, {hour:   '2-digit'});
+  var dateHour   = new Date().getHours();
   var dateMinute = new Date().toLocaleTimeString(undefined, {minute: '2-digit'});
   var time       = dateHour + ":" + dateMinute;
   drawText(ctx, time, 'black', 'center', '49px Roboto-subset', cx, cy - 26);

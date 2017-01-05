@@ -1,6 +1,14 @@
 //Author: Ed Dam
 
-var myAPIKey = '42efb17b4ad3d4a52025106d13376d96';
+var Clay       = require('./clay');
+var clayConfig = require('./config');
+var clay       = new Clay(clayConfig, null, { autoHandleEvents: false });
+
+Pebble.addEventListener('showConfiguration', function(e) {
+  Pebble.openURL(clay.generateUrl());
+});
+
+var myAPIKey   = '42efb17b4ad3d4a52025106d13376d96';
 
 Pebble.on('message', function(event) {
   var message = event.data;

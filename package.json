@@ -5,7 +5,8 @@
     "name": "digital-v1.5",
     "pebble": {
         "capabilities": [
-            "location"
+            "location",
+            "configurable"
         ],
         "displayName": "Digital v1.5",
         "enableMultiJS": true,
@@ -18,12 +19,13 @@
         "targetPlatforms": [
             "basalt",
             "chalk",
-            "diorite"
+            "diorite",
+            "emery"
         ],
         "uuid": "12910548-b4d9-4d97-a5d7-6e92d59bdcab",
         "watchapp": {
             "watchface": true
         }
     },
-    "version": "1.5.0"
+    "version": "1.6.0"
 }
