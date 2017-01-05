@@ -53,7 +53,7 @@ rocky.on('minutechange', function(event) {
 // Draw Watchface
 
 rocky.on('draw', function(event) {
-  var ctx    = event.context;
+  var ctx = event.context;
   
   // Clear Canvas
   ctx.clearRect(0, 0, ctx.canvas.clientWidth, ctx.canvas.clientHeight);
@@ -74,8 +74,8 @@ rocky.on('draw', function(event) {
   var height = ctx.canvas.unobstructedHeight;
   
   // Draw Fixed Text
-  drawText(ctx, 'pebble',       'white', 'left',   '24px bold Gothic', 10,          0);
-  drawText(ctx, 'digital v1.3', 'black', 'right',  '14px bold Gothic', width - 10,  9);
+  drawText(ctx, 'pebble',       'white', 'left',   '24px bold Gothic', 10,         0);
+  drawText(ctx, 'digital v1.4', 'black', 'right',  '14px bold Gothic', width - 10, 9);
   drawText(ctx, 'water',        'gray',  'left',   '14px bold Gothic', 13,         height - 20);
   drawText(ctx, 'WR',           'black', 'center', '18px bold Gothic', width / 2,  height - 24);
   drawText(ctx, 'resist',       'gray',  'right',  '14px bold Gothic', width - 12, height - 20);
@@ -93,8 +93,14 @@ rocky.on('draw', function(event) {
   var date      = dateDay + " " + dateDate + " " + dateMonth;
   drawText(ctx, date, 'white', 'center', '18px bold Gothic', width / 2,  height / 2 - 44);
   
+  // Draw Template
+  drawText(ctx, 'Location 5°C', 'white', 'center', '18px bold Gothic', width / 2, height - 53);
+  
   // Draw Weather
-  var city        = api.location;
-  var temperature = api.temperature;
-  drawText(ctx, city + ' ' + temperature + '°C', 'white', 'center', '18px bold Gothic', width / 2, height - 53);
+  if (api) {
+    ctx.clearRect(0, 121, 144, 12);
+    var city        = api.location;
+    var temperature = api.temperature;
+    drawText(ctx, city + ' ' + temperature + '°C', 'white', 'center', '18px bold Gothic', width / 2, height - 53);
+  }
 });
