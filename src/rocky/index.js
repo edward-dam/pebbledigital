@@ -94,7 +94,7 @@ rocky.on('draw', function(event) {
   drawText(ctx, date, 'white', 'center', '18px bold Gothic', width / 2,  height / 2 - 44);
   
   // Draw Template
-  drawText(ctx, 'Location 5°C', 'white', 'center', '18px bold Gothic', width / 2, height - 53);
+  drawText(ctx, 'Location ?°C', 'white', 'center', '18px bold Gothic', width / 2, height - 53);
   
   // Draw Weather
   if (api) {
