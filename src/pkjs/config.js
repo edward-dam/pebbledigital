@@ -26,15 +26,15 @@ module.exports = [
         "options": [
           { 
             "label": "24 Hours", 
-            "value": "twentyfour" 
+            "value": "24hrs" 
           },
           { 
             "label": "12 Hours", 
-            "value": "twelve" 
+            "value": "12hrs" 
           },
         ],
-        "defaultValue": "twentyfour"
-      }
+        "defaultValue": "24hrs",
+      },
     ]
   },
   {
