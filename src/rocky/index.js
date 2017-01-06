@@ -87,12 +87,12 @@ rocky.on('draw', function(event) {
   drawBox(ctx, 'gray',  cx + 15, cy + 64, 2,  17);
 
   // Draw Fixed Text
-  drawText(ctx, 'pebble',       'white', 'right',  '24px bold Gothic', cx - 13, cy - 84);
-  drawText(ctx, 'digital v1.5', 'black', 'left',   '14px bold Gothic', cx - 4,  cy - 75);
-  drawText(ctx, 'Location?',    'white', 'center', '18px bold Gothic', cx,      cy + 31);
-  drawText(ctx, 'water',        'gray',  'right',  '14px bold Gothic', cx - 23, cy + 64);
-  drawText(ctx, 'WR',           'black', 'center', '18px bold Gothic', cx,      cy + 60);
-  drawText(ctx, 'resist',       'gray',  'left',   '14px bold Gothic', cx + 23, cy + 64);
+  drawText(ctx, 'pebble',        'white', 'right',  '24px bold Gothic', cx - 13, cy - 84);
+  drawText(ctx, 'digital v1.5',  'black', 'left',   '14px bold Gothic', cx - 4,  cy - 75);
+  drawText(ctx, 'Location °C|F', 'white', 'center', '18px bold Gothic', cx,      cy + 31);
+  drawText(ctx, 'water',         'gray',  'right',  '14px bold Gothic', cx - 23, cy + 64);
+  drawText(ctx, 'WR',            'black', 'center', '18px bold Gothic', cx,      cy + 60);
+  drawText(ctx, 'resist',        'gray',  'left',   '14px bold Gothic', cx + 23, cy + 64);
   
   // Draw Date
   var dateDay   = new Date().toLocaleDateString(undefined, {day:   'long'});

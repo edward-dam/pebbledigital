@@ -34,7 +34,7 @@ module.exports = [
           },
         ],
         "defaultValue": "24hrs",
-      },
+      }
     ]
   },
   {
@@ -67,7 +67,7 @@ module.exports = [
   },
   {
     "type": "text",
-    "defaultValue": "Thanks for using Digital v1.5 by Edward Dam"
+    "defaultValue": "Thank you for using Digital v1.5 by Edward Dam"
   },
   {
     "type": "submit",
