@@ -30,15 +30,16 @@ function drawText(ctx, text, color, align, font, width, height) {
 
 // Collect API Messages
 
+var apihour;
+var apidate;
+var apitemp;
 var weather;
-var degrees;
-var hours = "24hrs" ;
+
+rocky.postMessage({command: 'settings'});
 
 rocky.on('hourchange', function(event) {
   rocky.postMessage({'fetch': true});
 });
-
-rocky.postMessage({command: 'settings'});
 
 rocky.on('message', function(event) {
   var message = event.data;
@@ -46,9 +47,10 @@ rocky.on('message', function(event) {
     weather = message.weather;
     rocky.requestDraw();
   }
-  if (message.hours && message.degrees) {
-    hours   = message.hours;
-    degrees = message.degrees;
+  if (message.apihour && message.apidate && message.apitemp) {
+    apihour = message.apihour;
+    apidate = message.apidate;
+    apitemp = message.apitemp;
     rocky.requestDraw();
   }
 });
@@ -94,12 +96,12 @@ rocky.on('draw', function(event) {
   drawText(ctx, 'WR',            'black', 'center', '18px bold Gothic', cx,      cy + 60);
   drawText(ctx, 'resist',        'gray',  'left',   '14px bold Gothic', cx + 23, cy + 64);
   
-  // Draw Date
-  var dateDay   = new Date().toLocaleDateString(undefined, {day:   'long'});
-  var dateDate  = new Date().toLocaleDateString(undefined, {day:   'numeric'});
-  var dateMonth = new Date().toLocaleDateString(undefined, {month: 'short'});
-  var date      = dateDay + " " + dateDate + " " + dateMonth;
-  drawText(ctx, date, 'white', 'center', '18px bold Gothic', cx,  cy - 44);
+  // Draw Date Day-Month
+  var dateDay    = new Date().toLocaleDateString(undefined, {day:   'long'});
+  var dateDate   = new Date().toLocaleDateString(undefined, {day:   'numeric'});
+  var dateMonth  = new Date().toLocaleDateString(undefined, {month: 'short'});
+  var dateDayMon = dateDay + " " + dateDate + " " + dateMonth;
+  drawText(ctx, dateDayMon, 'white', 'center', '18px bold Gothic', cx,  cy - 44);
 
   // Draw 24 Hour Time
   var dateMinute = new Date().toLocaleTimeString(undefined, {minute: '2-digit'});
@@ -109,10 +111,17 @@ rocky.on('draw', function(event) {
   drawText(ctx, time24Hour, 'black', 'center', '49px Roboto-subset', cx, cy - 26);
   
   // Test Settings
-  //drawText(ctx, hours + " " + degrees, 'red', 'center', '18px bold Gothic', cx, cy + 44);
+  //drawText(ctx, apihour + " " + apidate + " " + apitemp, 'red', 'center', '14px Gothic', cx, cy + 46);
   
+  // Draw Date Month-Day
+  if (apidate === "monthday") {
+    ctx.clearRect(0, cy - 37, mx, 14);
+    var dateMonDay = dateDay + " " + dateMonth + " " + dateDate;
+    drawText(ctx, dateMonDay, 'white', 'center', '18px bold Gothic', cx,  cy - 44);
+  }
+
   // Draw 12 Hour Time
-  if (hours === "12hrs") {
+  if (apihour === "12hrs") {
     var nums12Hour = ['12','01','02','03','04','05','06','07','08','09','10','11','12','01','02','03','04','05','06','07','08','09','10','11'];
     var date12Hour = nums12Hour[new Date().getHours()];
     var time12Hour = date12Hour + ":" + dateMinute;
@@ -124,7 +133,7 @@ rocky.on('draw', function(event) {
   if (weather) {
     var city        = weather.location;
     var temperature = weather.celsius + "°C";
-    if (degrees === "fahrenheit") {
+    if (apitemp === "fahrenheit") {
       temperature = weather.fahrenheit + "°F";
     }
     ctx.clearRect(0, cy + 37, mx, 13);
