@@ -127,7 +127,7 @@ rocky.on('draw', function(event) {
     if (degrees === "fahrenheit") {
       temperature = weather.fahrenheit + "°F";
     }
-    ctx.clearRect(0, cy + 37, mx, 12);
+    ctx.clearRect(0, cy + 37, mx, 13);
     drawText(ctx, city + " " + temperature, 'white', 'center', '18px bold Gothic', cx, cy + 31);
   }
 });
