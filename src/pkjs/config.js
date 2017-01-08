@@ -2,7 +2,7 @@
 
 module.exports = [
   { "type": "heading", "defaultValue": "Digital v1.5" },
-  { "type": "text",    "defaultValue": "by Edward Dam" },
+  { "type": "text", "defaultValue": "by Edward Dam" },
   { "type": "section", "items": [
     { "type": "heading", "defaultValue": "Time" },
     { "type": "text", "defaultValue": "Please Choose 24 Hours or 12 Hours" },
@@ -13,7 +13,7 @@ module.exports = [
   },
   { "type": "section", "items": [
     { "type": "heading", "defaultValue": "Date" },
-    { "type": "text", "defaultValue": "Please Choose Date Ordering" },
+    { "type": "text", "defaultValue": "Please Choose Date Order" },
     { "type": "radiogroup", "messageKey": "apidate", "options": [
       { "label": "Day - Month", "value": "daymonth" },
       { "label": "Month - Day", "value": "monthday" } ],
