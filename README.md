@@ -1,8 +1,8 @@
 # pebbledigital
 digital v1.5
 
-![pebbledigital.png](http://www.edwarddam.com/images/pebbledigital.png)
+![basalt.png](/assets/basalt.png)
 
 banner v1.5
 
-![pebblefacebanner.png](http://www.edwarddam.com/images/pebblefacebanner.png)
+![banner.png](/assets/banner.png)
