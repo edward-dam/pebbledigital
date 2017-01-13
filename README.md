@@ -14,7 +14,7 @@ https://apps.getpebble.com/applications/586bcb5de09e632ba6000445
 ###description
 Clean and simple digital watchface.
 
-Includes date, time, location and temperature.
+Includes date, time, location and temperature.<br /><br />
 
 Options:
 - Choose between 12 hours or 24 hours.
