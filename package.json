@@ -1,31 +1,66 @@
 {
     "author": "Edward Dam",
-    "dependencies": {},
+    "dependencies": {
+        "pebble-clay": "^1.0.0"
+    },
     "keywords": [],
-    "name": "digital-v1.5",
+    "name": "digital-v2.0",
     "pebble": {
         "capabilities": [
             "location",
-            "configurable"
+            "configurable",
+            "health"
         ],
-        "displayName": "Digital v1.5",
+        "displayName": "Digital v2.0",
         "enableMultiJS": true,
-        "messageKeys": [],
-        "projectType": "rocky",
+        "messageKeys": [
+            "LOCATION",
+            "TEMP_CEL",
+            "TEMP_FAH",
+            "HOUR",
+            "DATE",
+            "DEGREE",
+            "HEALTH"
+        ],
+        "projectType": "native",
         "resources": {
-            "media": []
+            "media": [
+                {
+                    "file": "images/bt_icon.png",
+                    "name": "BT_ICON",
+                    "targetPlatforms": [
+                        "aplite",
+                        "basalt",
+                        "chalk",
+                        "diorite"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/menu_icon.png",
+                    "menuIcon": true,
+                    "name": "MENU_ICON",
+                    "targetPlatforms": [
+                        "aplite",
+                        "basalt",
+                        "chalk",
+                        "diorite"
+                    ],
+                    "type": "bitmap"
+                }
+            ]
         },
         "sdkVersion": "3",
         "targetPlatforms": [
+            "aplite",
             "basalt",
             "chalk",
-            "diorite",
-            "emery"
+            "diorite"
         ],
-        "uuid": "12910548-b4d9-4d97-a5d7-6e92d59bdcab",
+        "uuid": "39b8b37e-dcf2-4f35-8955-22368a2cc418",
         "watchapp": {
             "watchface": true
         }
     },
-    "version": "1.53.0"
+    "version": "2.0.0"
 }
