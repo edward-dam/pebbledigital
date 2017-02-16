@@ -2,6 +2,8 @@
 ###screenshots
 
 ![basalt.png](/assets/basalt.png)
+![basalt-steps.png](/assets/basalt-steps.png)
+![basalt-sleep.png](/assets/basalt-sleep.png)
 
 ###banner
 
@@ -9,16 +11,21 @@
 
 ###app store
 
-https://apps.getpebble.com/applications/586bcb5de09e632ba6000445
+https://apps.getpebble.com/applications/58a5f8d46ca3877261000442
 
 ###description
 <br />
-Clean and simple digital watchface.
-
-Includes date, time, location and temperature.<br />
+Clean and simple digital watchface, includes:
+ - date and time
+ - battery percentage
+ - current location
+ - current temperature
+ - steps/sleep data
+ - bluetooth symbol<br />
 <br />
-
+ 
 Options:
-- Choose between 12 hours or 24 hours.
-- Choose between Celsius°C or Fahrenheit °F.
-- Choose date order day-month or month-day.
+ - 24 or 12 hours
+ - date order
+ - location or health
+ - fahrenheit or celsius
