@@ -4,6 +4,7 @@
 ![basalt.png](/assets/basalt.png)
 ![basalt-steps.png](/assets/basalt-steps.png)
 ![basalt-sleep.png](/assets/basalt-sleep.png)
+![basalt-bluetooth.png](/assets/basalt-bluetooth.png)
 
 ###banner
 
@@ -15,7 +16,7 @@ https://apps.getpebble.com/applications/58a5f8d46ca3877261000442
 
 ###description
 <br />
-Clean and simple digital watchface, includes:
+Simple digital watchface, includes:
  - date and time
  - battery percentage
  - current location
