@@ -16,13 +16,14 @@ https://apps.getpebble.com/applications/58a5f8d46ca3877261000442
 
 ### description
 <br />
+
 Simple digital watchface, includes:
  - date and time
  - battery percentage
  - current location
  - current temperature
  - steps/sleep data
- - bluetooth symbol<br />
+ - bluetooth symbol
 <br />
  
 Options:
