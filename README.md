@@ -12,7 +12,7 @@
 
 ### app store
 
-https://apps.getpebble.com/applications/58a5f8d46ca3877261000442
+https://apps.getpebble.com/en_US/application/58a5f8d46ca3877261000442
 
 ### description
 <br />
